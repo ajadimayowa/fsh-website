@@ -1,0 +1,33 @@
+* {
+    margin: none;
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-one {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5%;
+    min-height: 100vh;
+    padding-left: 2%;
+    padding-right: 2%;
+
+}
+
+@media screen and (max-width: 570px) {
+    .section-one {
+        display: flex;
+        padding-top: 5%;
+        padding-left: 2%;
+        padding-right: 2%;
+        min-height: 100vh;
+        justify-content: center;
+    }
+}
