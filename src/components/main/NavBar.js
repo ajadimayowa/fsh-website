@@ -7,7 +7,7 @@ function NavBar({ hamburgerPressed }) {
 
     return (
         <div className="navbar">
-            <div className='logo'><Link to='/'><img src={logo} /></Link></div>
+            <div className='logo'><Link to='/'><img src={logo} alt="logo" /></Link></div>
 
             <ul className='desktop-navigation'>
                 <li><Link to='/'>Home</Link> </li>
