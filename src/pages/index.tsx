@@ -34,7 +34,7 @@ const HomePage = () => {
         },
     ]
     return (
-        <div>
+        <div className='w-100'>
             <div className={`d-flex flex-column px-3 align-items-center justify-content-center text-light ${style.jumbotron}`}>
                 <h5 className='headers'>
                     Innovative Solution
@@ -57,15 +57,18 @@ const HomePage = () => {
                 </div>
 
             </div>
+            <div className='px-3'>
+
+           
             <h5 className='title mt-4'>
                 Serving  both enterprise and small
                 scale business owners.
             </h5>
 
-            <div className='d-flex gap-3 mt-3'>
-                <p>Trovest-Capital</p>
-                <p>ChaseFabricate</p>
-                <p>House Of Olives</p>
+            <div className='d-flex gap-1 mt-3'>
+                <p>Trovest-Capital |</p>
+                <p>ChaseFabricate |</p>
+                <p>House Of Olives |</p>
                 <p>GSSL</p>
             </div>
 
@@ -162,14 +165,14 @@ const HomePage = () => {
                 </Card>
             </div>
 
-            <div className='w-100 d-flex justify-content-center'>
+            {/* <div className='w-100 d-flex justify-content-center'>
                 <Card className='bg-secondary text-light mt-4 text-center w-75 shadow-sm p-3 rounded rounded-3 border border-0'>
                     <Card.Body className='d-flex flex-column align-items-center justify-content-center'>
 
                         video
                     </Card.Body>
                 </Card>
-            </div>
+            </div> */}
             <hr className='' />
             <div className='mt-5'>
                 <h5 className='title'>
@@ -185,6 +188,7 @@ const HomePage = () => {
                 <p>No 22 Providence Street
                 Lekki, <br/>Lagos, Nigeria</p>
             </div>
+        </div>
         </div>
     )
 }
