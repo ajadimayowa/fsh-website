@@ -4,9 +4,11 @@ import wok9jaLogo from '../assets/images/wok9jaBg.svg';
 import surplusNaijaLogo from '../assets/images/surplusNijaLogo.svg'
 import QuoteModal from '../components/modals/quote-modal';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
     const [onQuote, setOnQuote] = useState(false);
+    const navigate = useNavigate()
     const qualities = [
         'Efficient and easy to use software solutions.',
         'Customize base on your business need. ',
@@ -172,7 +174,7 @@ const HomePage = () => {
 
 
                 <div className='w-100 d-flex justify-content-center'>
-                    <Card className='bg-primary text-light mt-4 text-center w-75 shadow-sm p-3 rounded rounded-3 border border-0'>
+                    <Card className='bg-primary text-light mt-4 text-center shadow-sm p-3 rounded rounded-3 border border-0'>
                         <Card.Body className='d-flex flex-column align-items-center justify-content-center'>
 
                             <h5 className='title'>
@@ -182,7 +184,7 @@ const HomePage = () => {
                             <p className='text-light'>Join our training academy and
                                 get yourself on track
                             </p>
-                            <Button className='fw-bold bg-light d-flex gap-2 text-secondary' style={{ fontFamily: 'poppins' }}>
+                            <Button onClick={()=>navigate('tech-career')} className='fw-bold bg-light d-flex gap-2 text-secondary' style={{ fontFamily: 'poppins' }}>
                                 {/* <i className="bi bi-headset"></i> */}
                                 Get started
                             </Button>

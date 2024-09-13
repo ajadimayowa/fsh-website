@@ -18,7 +18,7 @@ const TechPage = () => {
 
     const courses = [
         {
-            courseTitle: 'Full-stack Developer',
+            courseTitle: 'Full-Stack Development',
             courseId: '002',
             courseDesc: 'Immerse yourself in the world of web development, learn to create robust web applications, and build a portfolio that will attract recruiters.',
             courseImage: fullImg
@@ -31,7 +31,7 @@ const TechPage = () => {
         },
         
         {
-            courseTitle: 'Front-end Engineering',
+            courseTitle: 'Front-End Development',
             courseId: '003',
             courseDesc: 'A beginner-friendly training, tailored to help you build your first web application with hands-on learning and expert guidance.',
             courseImage: frontEndImg
@@ -71,9 +71,9 @@ const TechPage = () => {
                     courses.map((app: ICourse, index: number) => (
                         <Card 
                         style={{backgroundColor:'rgba(233,248,255,0.5)'}}
-                        key={index} className='w-100 shadow-sm p-3 rounded rounded-3 border border-0'>
+                        key={index} className='w-100 shadow-sm  rounded rounded-3 border border-0'>
                             <Card.Body className='d-flex flex-column align-items-start flex-start gap-3'>
-                                <img className='w-100 bg-danger rounded' src={app.courseImage} height={150} />
+                                <img className='w-100 rounded' src={app.courseImage} height={150} />
                                 <h5 className='title'>{app.courseTitle}</h5>
                                 <p>{app.courseDesc}</p>
                                 <div className='d-flex gap-2'>
