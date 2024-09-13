@@ -22,3 +22,41 @@
     border-radius: 15px;
    height: 420px;
   }
+
+  /* Media query for tablets (768px and above) */
+@media (min-width: 768px) {
+  .container {
+    max-width: 750px;
+  }
+
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .navbar a {
+    padding: 15px 20px;
+  }
+
+  .main-content {
+    padding: 30px;
+  }
+}
+
+/* Media query for desktops (1024px and above) */
+@media (min-width: 1024px) {
+  body{
+    background-color: pink;
+  }
+  .container {
+    max-width: 1000px;
+  }
+
+  .navbar a {
+    padding: 20px 30px;
+  }
+
+  .main-content {
+    padding: 40px;
+  }
+}

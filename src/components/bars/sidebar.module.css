@@ -1,0 +1,16 @@
+.active{
+    width: 100%;
+    z-index: 1600;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #192252;
+    transition: transform 0.5s ease;
+}
+
+.inactive{
+    transition: all 0.5s ease;
+    transform: translateX(-100%);
+   position: absolute;
+}

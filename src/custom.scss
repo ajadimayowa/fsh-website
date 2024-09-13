@@ -137,7 +137,7 @@ $font-family-base: 'Arial', sans-serif; // Custom font
 
 p {
     font-family: "lato-regular", sans-serif;
-    font-size: 14px;
+  
     line-height: 22px;
     color: #535353;
 }
@@ -185,59 +185,6 @@ input[type='number']::-webkit-inner-spin-button {
     animation: moveDiv 0.5s;
 }
 
-@media (max-width: 576px) {
-    .slide-form {
-        position: relative;
-        animation: moveDiv 0.5s;
-    }
-
-    .slide-form .card {
-        // position: relative;
-        animation: moveDiv 0.5s;
-    }
-
-    .niramit-regular {
-        font-family: "Niramit", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-    }
-
-    .niramit-medium {
-        font-family: "Niramit", sans-serif;
-        font-weight: 500;
-        font-style: normal;
-    }
-
-    .niramit-semibold {
-        font-family: "Niramit", sans-serif;
-        font-weight: 600;
-        font-style: normal;
-    }
-
-    .niramit-bold {
-        font-family: "Niramit", sans-serif;
-        font-weight: 700;
-        font-style: normal;
-    }
-
-    p {
-        font-family: "lato-regular", sans-serif;
-        font-size: 0.9rem, 1rem;
-        font-weight: 400;
-    }
-
-    h3 {
-        font-family: "Niramit", sans-serif;
-        font-size: 14px;
-        font-weight: 700;
-        font-style: normal;
-    }
-
-    .card {
-        width: 50px;
-    }
-}
-
 // .available-services {
 //   background-color: rgb(221, 0, 37)
 // }
@@ -260,8 +207,6 @@ input[type='number']::-webkit-inner-spin-button {
     justify-content: space-evenly;
     // background-color: rgb(65, 248, 108)
 }
-
-@media (max-width: 576px) {}
 
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons.css';
