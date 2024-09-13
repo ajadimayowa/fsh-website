@@ -71,7 +71,7 @@ const TechPage = () => {
                     courses.map((app: ICourse, index: number) => (
                         <Card 
                         style={{backgroundColor:'rgba(233,248,255,0.5)'}}
-                        key={index} className='w-100 shadow-sm  rounded rounded-3 border border-0'>
+                        key={index} className='w-100 shadow-sm rounded rounded-3 border border-0'>
                             <Card.Body className='d-flex flex-column align-items-start flex-start gap-3'>
                                 <img className='w-100 rounded' src={app.courseImage} height={150} />
                                 <h5 className='title'>{app.courseTitle}</h5>
