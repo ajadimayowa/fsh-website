@@ -4,11 +4,9 @@ import wok9jaLogo from '../assets/images/wok9jaBg.svg';
 import surplusNaijaLogo from '../assets/images/surplusNijaLogo.svg'
 import QuoteModal from '../components/modals/quote-modal';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
     const [onQuote, setOnQuote] = useState(false);
-    const navigate = useNavigate()
     const qualities = [
         'Efficient and easy to use software solutions.',
         'Customize base on your business need. ',

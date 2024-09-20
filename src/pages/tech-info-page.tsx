@@ -1,65 +1,7 @@
 import { Button, Card } from 'react-bootstrap';
-
-import frontEndImg from '../assets/images/frontendImage.png';
-import prodImg from '../assets/images/prodWomanImage.png';
-import fullImg from '../assets/images/frontendImage.png';
-import wordPress from '../assets/images/managemnetPhoto.png';
 import curriculum from '../assets/pdfs/Software Development Curriculum - fsh.pdf'
 
 const TechInfoPage = () => {
-
-
-    interface ICourse {
-        courseTitle: string,
-        courseId: string,
-        courseDesc: string,
-        courseImage: string
-    }
-
-
-    const courses = [
-        {
-            courseTitle: 'Full-Stack Development',
-            courseId: '002',
-            courseDesc: 'Immerse yourself in the world of web development, learn to create robust web applications, and build a portfolio that will attract recruiters.',
-            courseImage: fullImg
-        },
-        {
-            courseTitle: 'Product Designer (UI/UX)',
-            courseId: '001',
-            courseDesc: 'For beginners to learn the fundamentals of design; focus is majorly on UI (User Interface) design.',
-            courseImage: prodImg
-        },
-
-        {
-            courseTitle: 'Front-End Development',
-            courseId: '003',
-            courseDesc: 'A beginner-friendly training, tailored to help you build your first web application with hands-on learning and expert guidance.',
-            courseImage: frontEndImg
-        },
-        {
-            courseTitle: 'Product Management',
-            courseId: '004',
-            courseDesc: 'Learn the rudiment of product management and what it takes to manage a product from start to finish.',
-            courseImage: wordPress
-        },
-
-        {
-            courseTitle: 'Wordpress Development',
-            courseId: '004',
-            courseDesc: 'Learn how to build business websites and landing pages with wordpress.',
-            courseImage: frontEndImg
-        },
-
-
-    ]
-
-    const courseSchedule = {
-        Duration: '24 weeks',
-        Approach: ' 10 hours/week',
-        DeliveryMode: 'Online',
-        Options: 'Weekend classes available'
-    }
 
     const programSchedule = [
         {
@@ -113,7 +55,7 @@ const TechInfoPage = () => {
                 </a>
             </div>
 
-            <div className='d-flex justify-content-center mt-4  text-start flex-column w-100 lato-regular' style={{}}>
+            <div className='d-flex justify-content-center mt-4  text-start flex-column w-100 lato-regular'>
                 {
                     programSchedule.map((prog) => (
                         <div className='d-flex gap-2'>
