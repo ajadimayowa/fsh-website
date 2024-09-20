@@ -37,9 +37,31 @@ const HomePage = () => {
             url: 'https://surplusfood9ija.vercel.app/'
         },
     ]
+
+    const socialMedia = [
+        {
+            name:'Instagram',
+            color:'danger',
+            icon:'bi bi-instagram',
+            path:'https://www.instagram.com/floathsolutionhub?igsh=MXh5emQ0M2tlZ3VvOA=='
+        },
+        {
+            name:'Linkdn',
+            color:'secondary',
+            icon:'bi bi-linkedin',
+            path:'https://www.linkedin.com/company/floath-solution-hub/'
+        },
+        {
+            name:'Youtube',
+            color:'danger',
+            icon:'bi bi-youtube',
+            path:'https://www.youtube.com/@floathub'
+        }
+    ]
     return (
         <div className='w-100'>
             <QuoteModal on={onQuote} off={()=>setOnQuote(false)}/>
+                
             <div className={`d-flex flex-column px-3 align-items-center justify-content-center text-light ${style.jumbotron}`}>
                 <h5 className='headers'>
                     Innovative Solution
@@ -94,12 +116,9 @@ const HomePage = () => {
 
                 </div>
 
-                <h5 className='title mt-4 w-75'>
-                    Reliable and Easy to use
-                    software solutions.
-                </h5>
+                
 
-                <div className={`my-4 ${style.card}`}>
+                <div className={`my-4 mt-4 ${style.card}`}>
 
                 </div>
 
@@ -114,7 +133,7 @@ const HomePage = () => {
                     automated, let us take that burden.
                 </p>
 
-                <div>
+                <div className='px-2'>
                     {
                         qualities.map((qual: string, index: number) => (
                             <div key={index} className='d-flex gap-2'>
@@ -184,9 +203,10 @@ const HomePage = () => {
                             <p className='text-light'>Join our training academy and
                                 get yourself on track
                             </p>
-                            <Button onClick={()=>navigate('tech-career')} className='fw-bold bg-light d-flex gap-2 text-secondary' style={{ fontFamily: 'poppins' }}>
+                            
+                            <Button className='fw-bold bg-light d-flex gap-2 text-secondary' style={{ fontFamily: 'poppins' }}>
                                 {/* <i className="bi bi-headset"></i> */}
-                                Get started
+                                <a href='tech-career' style={{textDecoration:'none'}}>Get Started</a>
                             </Button>
                         </Card.Body>
                     </Card>
@@ -206,15 +226,21 @@ const HomePage = () => {
                         Connect with us
                     </h5>
                     <p className='p-0 m-0'>hello@floatsolutionhub.com</p>
-                    <p className='p-0 m-0 fw-bold'>+2348166064166</p>
+                    <div className='d-flex gap-4 mt-3'>
+                        {
+                            socialMedia.map((media)=>(<a href={media.path} target='blank' > <i role="button" className={`text-${media.color} ${media.icon}`}></i></a> ))
+                        }
+                    </div>
                 </div>
 
                 <div className='mt-4'>
                     <h5 className='title'>
                         Lagos
                     </h5>
-                    <p>No 22 Providence Street
-                        Lekki, <br />Lagos, Nigeria</p>
+                    <p className='p-0 m-0'>No 22 Providence Street
+                        Lekki, <br />Lagos, Nigeria
+                    </p>
+                    <p className='mt-3 fw-bold'>+2348166064166</p>
                 </div>
             </div>
         </div>

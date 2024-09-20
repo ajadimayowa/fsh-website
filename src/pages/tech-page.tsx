@@ -1,6 +1,7 @@
 import { Card } from 'react-bootstrap';
 
 import frontEndImg from '../assets/images/frontendImage.png';
+import frontEndIm from '../assets/images/frontendIm.png';
 import prodImg from '../assets/images/prodWomanImage.png';
 import fullImg from '../assets/images/frontendImage.png';
 import wordPress from '../assets/images/managemnetPhoto.png';
@@ -29,6 +30,12 @@ const TechPage = () => {
             courseDesc: 'For beginners to learn the fundamentals of design; focus is majorly on UI (User Interface) design.',
             courseImage: prodImg
         },
+        {
+            courseTitle: 'Product Management',
+            courseId: '004',
+            courseDesc: 'Learn the rudiment of product management and what it takes to manage a product from start to finish.',
+            courseImage: frontEndIm
+        },
         
         {
             courseTitle: 'Front-End Development',
@@ -36,18 +43,12 @@ const TechPage = () => {
             courseDesc: 'A beginner-friendly training, tailored to help you build your first web application with hands-on learning and expert guidance.',
             courseImage: frontEndImg
         },
-        {
-            courseTitle: 'Product Management',
-            courseId: '004',
-            courseDesc: 'Learn the rudiment of product management and what it takes to manage a product from start to finish.',
-            courseImage: wordPress
-        },
-
+       
         {
             courseTitle: 'Wordpress Development',
             courseId: '004',
             courseDesc: 'Learn how to build business websites and landing pages with wordpress.',
-            courseImage: frontEndImg
+            courseImage: wordPress
         },
 
 
@@ -69,6 +70,7 @@ const TechPage = () => {
             <div className='d-flex gap-3 flex-wrap'>
                 {
                     courses.map((app: ICourse, index: number) => (
+                        <a href={`tech-career/${app.courseId}`} style={{textDecoration:'none'}}>
                         <Card 
                         style={{backgroundColor:'rgba(233,248,255,0.5)'}}
                         key={index} className='w-100 shadow-sm rounded rounded-3 border border-0'>
@@ -82,6 +84,7 @@ const TechPage = () => {
                                 </div>
                             </Card.Body>
                         </Card>
+                        </a>
                     ))
                 }
             </div>
