@@ -6,19 +6,21 @@
   /* Centers the background image */
   background-repeat: no-repeat;
   /* Ensures the image doesn't repeat */
-  height: 75vh;
+  min-height: 75vh;
 
 }
 
-.card {
-  background-image: url('../assets/images/woman-phone.jpg');
-  background-size: cover;
-  /* Ensures the image covers the entire div */
-  background-repeat: no-repeat;
-  /* Ensures the image doesn't repeat */
-  border-radius: 15px;
-  height: 420px;
+.jumbotron .leftSide {
+  width: 100%;
+
 }
+
+.jumbotron .rightSide {
+  width: 100%;
+  display: none;
+
+}
+
 
 .card2 {
   background-image: url('../assets/images/computerman.jpg');
@@ -66,27 +68,50 @@
 
   }
 
-  .left {
-    width: 100%;
-
-  }
-
-  .jumbotron .right {
+  .jumbotron .leftSide {
     width: 50%;
-    background-color: pink;
-    padding: 10%;
-
+    padding: 5%;
+  
   }
 
-  .container {
-    max-width: 1000px;
+  .jumbotron .leftSide p {
+    width: 65%;
+  
   }
 
-  .navbar a {
-    padding: 20px 30px;
+  .jumbotron .leftSide h4 {
+    width: 100%;
+    font-size: 45px;
+  
+  }
+  
+  .jumbotron .rightSide {
+    width: 50%;
+    padding: 5%;
+  
   }
 
-  .main-content {
-    padding: 40px;
+  .section2 .left{
+    width: 50%;
+  }
+  .section2 .right{
+    width: 50%;
+  }
+
+  .section2 .left h5{
+    font-size: 30px;
+    padding-inline: 5%;
+  }
+
+  .section2 .left p{
+    padding-inline: 5%;
+  }
+
+  .section2 .left .brands{
+    padding-inline: 5%;
+  }
+
+  .section2 .left .bi{
+    font-size: 2em;
   }
 }

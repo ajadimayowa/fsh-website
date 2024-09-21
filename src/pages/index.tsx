@@ -1,12 +1,14 @@
 import { Button, Card } from 'react-bootstrap';
-import style from './index.module.css';
+import './index.css';
 import wok9jaLogo from '../assets/images/wok9jaBg.svg';
 import surplusNaijaLogo from '../assets/images/surplusNijaLogo.svg'
 import QuoteModal from '../components/modals/quote-modal';
+import sect1mage from '../assets/images/sect1img.png'
 import { useState } from 'react';
 
 const HomePage = () => {
     const [onQuote, setOnQuote] = useState(false);
+
     const qualities = [
         'Efficient and easy to use software solutions.',
         'Customize base on your business need. ',
@@ -38,85 +40,117 @@ const HomePage = () => {
 
     const socialMedia = [
         {
-            name:'Instagram',
-            color:'danger',
-            icon:'bi bi-instagram',
-            path:'https://www.instagram.com/floathsolutionhub?igsh=MXh5emQ0M2tlZ3VvOA=='
+            name: 'Instagram',
+            color: 'danger',
+            icon: 'bi bi-instagram',
+            path: 'https://www.instagram.com/floathsolutionhub?igsh=MXh5emQ0M2tlZ3VvOA=='
         },
         {
-            name:'Linkdn',
-            color:'secondary',
-            icon:'bi bi-linkedin',
-            path:'https://www.linkedin.com/company/floath-solution-hub/'
+            name: 'Linkdn',
+            color: 'secondary',
+            icon: 'bi bi-linkedin',
+            path: 'https://www.linkedin.com/company/floath-solution-hub/'
         },
         {
-            name:'Youtube',
-            color:'danger',
-            icon:'bi bi-youtube',
-            path:'https://www.youtube.com/@floathub'
+            name: 'Youtube',
+            color: 'danger',
+            icon: 'bi bi-youtube',
+            path: 'https://www.youtube.com/@floathub'
         }
     ]
     return (
         <div className='w-100'>
-            <QuoteModal on={onQuote} off={()=>setOnQuote(false)}/>
-                
-            <div className={`d-flex flex-column px-3 align-items-center justify-content-center text-light ${style.jumbotron}`}>
-                <h5 className='headers'>
-                    Innovative Solution
-                    For  Every of Your
-                    Business Need.
-                </h5>
+            <QuoteModal on={onQuote} off={() => setOnQuote(false)} />
 
-                <p className="text-light">
-                    Unlock innovative solutions tailored to
-                    meet your unique business needs,
-                    driving growth and success in
-                    a competitive market.
-                </p>
-                <div className='d-flex gap-2 w-100' >
+            <div className={`w-100 d-flex flex-wrap p-3 gap-4 text-light jumbotron`}>
+                <div className='leftSide d-flex flex-column justify-content-center'>
+                    <h4 className='heading'>
+                        Innovative Solution
+                        For  Every of Your
+                        Business Need.
+                    </h4>
+                    <p className='text-light'>
+                        Unlock innovative solutions tailored to
+                        meet your unique business needs,
+                        driving growth and success in
+                        a competitive market.
+                    </p>
+                    <div className='w-75'>
+                        <Button onClick={() => setOnQuote(true)} style={{ fontFamily: 'poppins', fontSize: '1em' }} className=' d-flex align-items-center gap-2 fw-bold bg-light text-dark p-2 px-3'>
+                            <i className="bi bi-headset p-0 m-0" style={{ fontSize: '1.3em' }}></i>
+                            Talk to us
+                        </Button>
+                    </div>
+                </div>
 
-                    <Button onClick={()=>setOnQuote(true)} className='fw-bold bg-light p-2 align-items-center px-4  border border-0 d-flex gap-2' style={{ fontFamily: 'poppins' }}>
-                        <i className="bi bi-headset" style={{ fontSize: '1.5em' }}></i>
-                        Talk to us
-                    </Button>
+
+                <div className='rightSide text-light justify-content-center align-items-center p-3'>
+                    <div className='d-flex flex-column align-items-center text-center'>
+                        <Card className='w-100' style={{ height: '200px' }}>
+
+                        </Card>
+                        <p className='text-light text-center w-75' style={{ fontFamily: 'poppins' }}>
+                            Watch our MD Talk About
+                            the beauty of our innovations
+                            and how we are changing the industry</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div className='section2 px-3 d-flex flex-wrap w-100 mt-3 align-items-center justify-content-center'>
+
+                <div className='left'>
+                    <h5 className='title m-0 mt-4'>
+                        We use the best available industry standard
+                        resources to drive in profit.
+                    </h5>
+                    <p className="m-0 mt-2">
+                        bringing to your reach access to a team of tech
+                        experts with years of experience across
+                        different I.T field.
+                    </p>
+                    <div className='d-flex gap-4 mt-4 brands'>
+                        <div className='d-flex gap-2 align-items-center'>
+                            <i className="bi bi-microsoft"></i>
+                            Azure
+                        </div>
+
+                        <div className='d-flex gap-2 align-items-center'>
+                            <i className="bi bi-google"></i>
+                            Google
+                        </div>
+
+                        <div className='d-flex gap-2 align-items-center'>
+                            <i className="bi bi-meta"></i>
+                            Meta
+                        </div>
+
+                        <div className='d-flex gap-2 align-items-center'>
+                            <i className="bi bi-amazon"></i>
+                            Aws
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+                <div className='right d-flex align-items-center mt-4 justify-content-center'>
+                    <img src={sect1mage} height={424} />
                 </div>
 
             </div>
             <div className='px-3'>
 
 
-                <h5 className='title mt-4'>
-                    We use the best available industry standard
-                    resources to drive in profit.
-                </h5>
-
-                <div className='d-flex gap-4 mt-4'>
-                    <div className='d-flex gap-2'>
-                        <i className="bi bi-microsoft"></i>
-                        Azure
-                    </div>
-
-                    <div className='d-flex gap-2'>
-                        <i className="bi bi-google"></i>
-                        Google
-                    </div>
-
-                    <div className='d-flex gap-2'>
-                        <i className="bi bi-meta"></i>
-                        Meta
-                    </div>
-
-                    <div className='d-flex gap-2'>
-                        <i className="bi bi-amazon"></i>
-                        Aws
-                    </div>
 
 
-                </div>
 
-                
 
-                <div className={`my-4 mt-4 ${style.card}`}>
+
+
+                <div className={`my-4 mt-4 .card`}>
 
                 </div>
 
@@ -152,7 +186,7 @@ const HomePage = () => {
                     different I.T field.
                 </p>
 
-                <div className={`my-4 ${style.card2}`}>
+                <div className={`my-4 card2`}>
 
                 </div>
 
@@ -201,10 +235,10 @@ const HomePage = () => {
                             <p className='text-light'>Join our training academy and
                                 get yourself on track
                             </p>
-                            
+
                             <Button className='fw-bold bg-light d-flex gap-2 text-secondary' style={{ fontFamily: 'poppins' }}>
                                 {/* <i className="bi bi-headset"></i> */}
-                                <a href='tech-career' style={{textDecoration:'none'}}>Get Started</a>
+                                <a href='tech-career' style={{ textDecoration: 'none' }}>Get Started</a>
                             </Button>
                         </Card.Body>
                     </Card>
@@ -226,7 +260,7 @@ const HomePage = () => {
                     <p className='p-0 m-0'>hello@floatsolutionhub.com</p>
                     <div className='d-flex gap-4 mt-3'>
                         {
-                            socialMedia.map((media)=>(<a href={media.path} target='blank' > <i role="button" className={`text-${media.color} ${media.icon}`}></i></a> ))
+                            socialMedia.map((media) => (<a href={media.path} target='blank' > <i role="button" className={`text-${media.color} ${media.icon}`}></i></a>))
                         }
                     </div>
                 </div>
