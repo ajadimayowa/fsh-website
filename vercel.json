@@ -4,5 +4,12 @@
         "source": "/(.*)",
         "destination": "/index.html"
       }
-    ]
+    ],
+    "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://www.floatsolutionhub.com/$1",
+      "permanent": true
+    }
+  ]
   }
