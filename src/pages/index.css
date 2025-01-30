@@ -1,26 +1,113 @@
 .jumbotron {
-  background-image: url('../assets/images/bgImage.jpg');
+  background-image: url('https://verifiedsell.s3.eu-north-1.amazonaws.com/fshwebsiteresources/desktop-jumbo-image.jpg');
   background-size: cover;
   /* Ensures the image covers the entire div */
   background-position: center;
   /* Centers the background image */
   background-repeat: no-repeat;
   /* Ensures the image doesn't repeat */
-  min-height: 75vh;
-
+  min-height: 60vh;
 }
 
 .jumbotron .leftSide {
-  width: 100%;
-
+  padding-inline: 10%;
+  width: 45%;
+  justify-content: center;
+  align-items: center;
 }
 
 .jumbotron .rightSide {
-  width: 100%;
-  display: none;
+  width: 50%;
+  /* background-color: pink; */
+  justify-content: center;
+  align-items: end;
+}
+
+.dwoman{
+  height: 400px;
+  margin-bottom: -65px;
 
 }
 
+.office-sec{
+  height: 300px;
+}
+
+.home-section-two{
+  /* background-color: red; */
+  display: flex;
+  background-image: url('https://verifiedsell.s3.eu-north-1.amazonaws.com/fshwebsiteresources/home-sect-2-bg.png');
+    
+ 
+}
+
+.home-section-two .home-section-two-left{
+  display: flex;
+  /* background-color: green; */
+  width: 45%;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-section-two .home-section-two-right{
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.home-section-three {
+  background-color:rgba(42, 183, 200, 0.13);
+  display: flex;
+  padding: 3%;
+  padding-inline: 10%;
+  /* background-image: url('https://verifiedsell.s3.eu-north-1.amazonaws.com/fshwebsiteresources/home-sect-2-bg.png'); */
+    
+ 
+}
+
+.home-section-three .home-section-three-left{
+  display: flex;
+  /* background-color: green; */
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.home-section-three .home-section-three-right{
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+
+.home-section-four {
+  /* background-color:rgba(42, 183, 200, 0.13); */
+  display: flex;
+  padding: 2%;
+  padding-inline: 5%;
+  /* background-image: url('https://verifiedsell.s3.eu-north-1.amazonaws.com/fshwebsiteresources/home-sect-2-bg.png'); */
+    
+ 
+}
+
+.home-section-four .home-section-four-left{
+  display: flex;
+  /* background-color: green; */
+  width: 70%;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.home-section-four .home-section-four-right{
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+ 
+}
 
 .card2 {
   background-image: url('../assets/images/computerman.jpg');
@@ -32,86 +119,99 @@
   height: 420px;
 }
 
-/* Media query for tablets (768px and above) */
-@media (min-width: 768px) {
-  .container {
-    max-width: 750px;
-  }
-
-  .navbar {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .navbar a {
-    padding: 15px 20px;
-  }
-
-  .main-content {
-    padding: 30px;
-  }
-}
 
 /* Media query for desktops (1024px and above) */
-@media (min-width: 1024px) {
-  .jumbotron {
-    display: flex;
-    flex-wrap: wrap;
-    background-image: url('../assets/images/desktop-jumbo-image.png');
-    background-size: cover;
-    /* Ensures the image covers the entire div */
-    background-position: center;
-    /* Centers the background image */
-    background-repeat: no-repeat;
-    /* Ensures the image doesn't repeat */
-    width: 100%;
-
-  }
-
+@media  screen and (max-width: 570px) {
   .jumbotron .leftSide {
-    width: 50%;
-    padding: 5%;
-  
-  }
-
-  .jumbotron .leftSide p {
-    width: 65%;
-  
-  }
-
-  .jumbotron .leftSide h4 {
+    padding-inline: 3%;
     width: 100%;
-    font-size: 45px;
+    justify-content: center;
   
   }
   
   .jumbotron .rightSide {
-    width: 50%;
-    padding: 5%;
+    width: 100%;
+    /* background-color: rgb(190, 6, 37); */
+  }
+
+  .dwoman{
+    height: 300px;
+    margin-bottom: -65px;
   
   }
 
-  .section2 .left{
-    width: 50%;
-  }
-  .section2 .right{
-    width: 50%;
+  .home-section-two{
+    display: flex;
+    /* background-color: pink; */
+    flex-direction: column-reverse;
   }
 
-  .section2 .left h5{
-    font-size: 30px;
+  .home-section-two .home-section-two-left{
+    display: flex;
+    /* background-color: green; */
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .home-section-two .home-section-two-right{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .home-section-three {
+    background-color:rgba(42, 183, 200, 0.13);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3%;
+    padding-inline: 10%;
+    /* background-image: url('https://verifiedsell.s3.eu-north-1.amazonaws.com/fshwebsiteresources/home-sect-2-bg.png'); */
+      
+   
+  }
+  
+  .home-section-three .home-section-three-left{
+    display: flex;
+    /* background-color: green; */
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+   
+  }
+  
+  .home-section-three .home-section-three-right{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+   
+  }
+
+
+  .home-section-four {
+    /* background-color:rgba(42, 183, 200, 0.13); */
+    display: flex;
+    padding: 2%;
     padding-inline: 5%;
+    /* background-image: url('https://verifiedsell.s3.eu-north-1.amazonaws.com/fshwebsiteresources/home-sect-2-bg.png'); */
+      
+   
   }
-
-  .section2 .left p{
-    padding-inline: 5%;
+  
+  .home-section-four .home-section-four-left{
+    display: flex;
+    /* background-color: green; */
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+   
   }
-
-  .section2 .left .brands{
-    padding-inline: 5%;
-  }
-
-  .section2 .left .bi{
-    font-size: 2em;
+  
+  .home-section-four .home-section-four-right{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+   
   }
 }

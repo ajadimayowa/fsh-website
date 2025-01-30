@@ -1,0 +1,29 @@
+.testimony-card-container {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+}
+.testifier-image{
+    width: 30%;
+}
+.testifier-info {
+    width: 50%;
+}
+
+@media screen and (max-width:574px) {
+    .testimony-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+        /* background-color:yellow */
+    }
+
+    .testifier-image{
+        width: 80%;
+    }
+    .testifier-info {
+        width: 100%;
+    }
+}

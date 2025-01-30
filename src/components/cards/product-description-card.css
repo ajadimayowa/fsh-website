@@ -1,0 +1,16 @@
+.product-card-container {
+    /* background-color: red; */
+    display: flex;
+    width: 250px;
+}
+
+@media screen and (max-width:574px) {
+    .testimony-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+        /* background-color:yellow */
+    }
+}

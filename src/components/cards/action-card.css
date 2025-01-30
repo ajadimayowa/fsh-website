@@ -1,0 +1,10 @@
+.action-card-container {
+    background-color: red;
+    max-width: 416px;
+}
+
+@media screen and (max-width:574px) {
+    .action-card-container {
+        background-color:yellow
+    }
+}

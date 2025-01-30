@@ -6,7 +6,7 @@ import { useState } from "react";
 const HomeContainer =()=>{
     const [toggleSideNav,setToggleSideNav] = useState(false)
     return(
-        <div className="w-100">
+        <div className="w-100 min-vh-100">
             <TopBar toggleSideNav={()=>setToggleSideNav(!toggleSideNav)}/>
             
             <div>{<Outlet/>}</div>

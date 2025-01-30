@@ -1,0 +1,42 @@
+.link {
+color: #242424
+}
+
+.link:hover {
+    color:#7D7D7D
+    }
+
+.desktop-nav {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+.sidebar-toggle{
+    display: none;
+}
+
+@media only screen and (max-width: 570px) {
+        .desktop-nav {
+          display: none;
+        }
+
+        .sidebar-toggle{
+            display: flex;
+        }
+      
+        .jumbo-left div {
+          width: 50%;
+        }
+      
+        .sidebar {
+          width: 25%;
+        }
+      
+        .main-content {
+          width: 70%;
+        }
+      
+        .sidebar-toggler {
+          display: flex;
+        }
+      }

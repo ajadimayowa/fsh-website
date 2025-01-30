@@ -1,0 +1,15 @@
+.itemlist-card-container {
+    background-color: rgba(42, 183, 200, .13);
+    display: flex;
+}
+
+@media screen and (max-width:574px) {
+    .itemlist-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+        /* background-color:yellow */
+    }
+}
