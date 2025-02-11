@@ -1,0 +1,16 @@
+.footer-container {
+    display: flex;
+    background-color: red;
+    flex-wrap: wrap;
+}
+
+@media  screen and (max-width: 570px) {
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+
+}

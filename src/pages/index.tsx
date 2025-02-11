@@ -1,9 +1,6 @@
-import { Button, Card, Image } from 'react-bootstrap';
+import { Button,Image } from 'react-bootstrap';
 import './index.css';
-import wok9jaLogo from '../assets/images/wok9jaBg.svg';
-import surplusNaijaLogo from '../assets/images/surplusNijaLogo.svg'
 import QuoteModal from '../components/modals/quote-modal';
-import sect1mage from '../assets/images/sect1img.png'
 import { useState } from 'react';
 import ActionCard from '../components/cards/action-card';
 import TestimonyCard from '../components/cards/testimony-card';
@@ -30,30 +27,35 @@ const HomePage = () => {
     ]
 
     const testimonies = [
-        'Reliability',
-        'Accountability'
+        {
+            testifierImgUrl: 'https://verifiedsell.s3.eu-north-1.amazonaws.com/fshwebsiteresources/alfa.jpg',
+            testimony: 'Floath solution hub have been handling all our I.T Process, we Outsource it all to them and they have been delivering.',
+            testifierName: 'Mr Abeeb Akande',
+            testifierRole: 'Civil Engineer',
+
+        }
     ]
 
-    interface IApps {
-        title: string,
-        desc: string,
-        imgUrl: string,
-        url: string
-    }
-    const ourApps: IApps[] = [
-        {
-            title: 'Wok9ja',
-            desc: 'A Freelance platform for industry professionals in Nigeria.',
-            imgUrl: wok9jaLogo,
-            url: 'https://wok9ja.vercel.app/'
-        },
-        {
-            title: 'surplusfood',
-            desc: 'A grocery vendor store for buying and selling of groceries',
-            imgUrl: surplusNaijaLogo,
-            url: 'https://surplusfood9ija.vercel.app/'
-        },
-    ]
+    // interface IApps {
+    //     title: string,
+    //     desc: string,
+    //     imgUrl: string,
+    //     url: string
+    // }
+    // const ourApps: IApps[] = [
+    //     {
+    //         title: 'Wok9ja',
+    //         desc: 'A Freelance platform for industry professionals in Nigeria.',
+    //         imgUrl: 'https://verifiedsell.s3.eu-north-1.amazonaws.com/fshwebsiteresources/wok9jalogo.svg',
+    //         url: 'https://wok9ja.vercel.app/'
+    //     },
+    //     {
+    //         title: 'surplusfood',
+    //         desc: 'A grocery vendor store for buying and selling of groceries',
+    //         imgUrl: surplusNaijaLogo,
+    //         url: 'https://surplusfood9ija.vercel.app/'
+    //     },
+    // ]
 
     const brands = [
         {
@@ -217,7 +219,8 @@ const HomePage = () => {
                 </div>
 
                 <div className='home-section-four-left shadow shadow-sm rounded rounded-3 bg-grey'>
-                <TestimonyCard
+                    <TestimonyCard
+                        testifierImg='https://verifiedsell.s3.eu-north-1.amazonaws.com/fshwebsiteresources/naomi-backend.jpg'
                         title='Folake James'
                         description='I Joined float solution hub in 2023 as a newbie to tech, fast foward to a two year after, i was able to get an internship with a reputable organisation.'
                         buttonText='Get Started With us'
@@ -230,7 +233,7 @@ const HomePage = () => {
 
 
             <div className='home-section-five flex-wrap mt-5 text-center p-4'>
-                <ItemListCard/>
+                <ItemListCard title={'See some products we have built.'} />
                 {/* <div >
 
                 </div>
@@ -246,21 +249,21 @@ const HomePage = () => {
 
             <div className='home-section-two d-flex flex-wrap p-3 mt-3'>
                 <div className='home-section-two-left'>
-                    <Image className='office-sec' src='https://verifiedsell.s3.eu-north-1.amazonaws.com/fshwebsiteresources/home-sect-2-left-img.png' />
+                    <Image className='office-sec' src='https://verifiedsell.s3.eu-north-1.amazonaws.com/fshwebsiteresources/handshake.jpg' />
                 </div>
 
                 <div className='home-section-two-right flex-wrap mt-5' style={{ paddingInline: '2%' }}>
-                    
+
 
                     <h1 className='m-0 mt-3 heading poppins-extrabold'>
-                    What is our mission?
+                        What is our mission?
                     </h1>
                     <p className='mt-3'>
-                    To  create a safe  space in the Nigeria tech industry while shaping how Technology is used to drive in profit and confidence.
+                        To  create a safe  space in the Nigeria tech industry while shaping how Technology is used to drive in profit and confidence.
                     </p>
 
                     <h1 className='m-0 mt-3 heading poppins-extrabold'>
-                    Our Core Values?
+                        Our Core Values?
                     </h1>
                     <ul className='mt-4 p-0'>
                         {
@@ -275,13 +278,13 @@ const HomePage = () => {
                 </div>
             </div>
 
-<div className='w-100 d-flex text-center justify-content-center'>
-<hr className='w-75'/>
-</div>
-            
+            <div className='w-100 d-flex text-center justify-content-center'>
+                <hr className='w-75' />
+            </div>
 
 
-<div className='home-section-four d-flex flex-wrap p-3'>
+
+            <div className='home-section-four d-flex flex-wrap p-3'>
                 <div className='d-flex flex-column align-items-center justify-content-center w-100'>
                     <h5 className='title mt-4 text-center w-75'>
                         Trusted by over 2000 users
@@ -294,23 +297,24 @@ const HomePage = () => {
                     </p>
 
                     <div className='home-section-four-left shadow shadow-sm rounded rounded-3 bg-grey'>
-                </div>
+                    </div>
                 </div>
 
                 <div className='d-flex'>
-                <ul className='p-0 d-flex flex-wrap'>
-                    {
-                        testimonies.map(()=>(
-                            <TestimonyCard
-                        title='Folake James'
-                        description='I Joined float solution hub in 2023 as a newbie to tech, fast foward to a two year after, i was able to get an internship with a reputable organisation.'
-                        buttonText='Get Started With us'
-                        bgColor=''
-                        jobName='Backend Engineer'
-                    />
-                        ))
-                    }
-                </ul>
+                    <ul className='p-0 d-flex flex-wrap w-100 justify-content-center align-items-center'>
+                        {
+                            testimonies.map((testimony) => (
+                                <TestimonyCard
+                                    testifierImg={testimony.testifierImgUrl}
+                                    testifierName={testimony.testifierName}
+                                    description={testimony.testimony}
+                                    buttonText='Get Started With us'
+                                    bgColor=''
+                                    jobName={testimony.testifierRole}
+                                />
+                            ))
+                        }
+                    </ul>
                 </div>
 
                 {/* <div className='w-100 d-flex justify-content-center'>
