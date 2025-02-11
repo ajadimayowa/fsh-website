@@ -1,8 +1,8 @@
-import { Button, Image } from 'react-bootstrap';
+import {Image } from 'react-bootstrap';
 import './product-description-card.css';
 import React from 'react';
 
-const ProductDescriptionCard: React.FC<any> = ({ title,jobName, description, buttonText, bgColor,action, imgUrl }) => {
+const ProductDescriptionCard: React.FC<any> = ({ title,description,bgColor,imgUrl }) => {
     return (
         <div className={`product-card-container d-flex flex-column gap-2 bg-${bgColor}  align-items-start p-3 m-3 rounded rounded-3`}>
             <Image height={78} className=''  src={imgUrl} />

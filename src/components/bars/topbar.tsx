@@ -1,7 +1,7 @@
 import React from 'react'
-import logo from '../../assets/svgs/floatlogo.svg'
+// import logo from '../../assets/svgs/floatlogo.svg'
 import { useLocation, useNavigate } from 'react-router-dom'
-import { Button } from 'react-bootstrap';
+// import { Button } from 'react-bootstrap';
 import './topbar.css'
 
 
