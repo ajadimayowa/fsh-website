@@ -29,11 +29,8 @@ const HomeContainer =()=>{
     return(
         <div className="w-100 min-vh-100">
             <TopBar toggleSideNav={()=>setToggleSideNav(!toggleSideNav)}/>
-            
             <div>{<Outlet/>}</div>
             <SideBarUnauth on={toggleSideNav} off={()=>setToggleSideNav(!toggleSideNav)}/>
-          
-
         </div>
     )
 

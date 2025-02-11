@@ -6,6 +6,7 @@ import ActionCard from '../components/cards/action-card';
 import TestimonyCard from '../components/cards/testimony-card';
 import ItemListCard from '../components/cards/item-list-card';
 import BottomBar from '../components/bars/bottom-bar';
+import TopBar from '../components/bars/topbar';
 
 const HomePage = () => {
     const [onQuote, setOnQuote] = useState(false);
@@ -94,8 +95,8 @@ const HomePage = () => {
         }
     ]
     return (
-        <>
         <div className='w-100'>
+            <TopBar/>
             <QuoteModal on={onQuote} off={() => setOnQuote(false)} />
 
             <div className={`w-100 d-flex flex-wrap gap-2 p-3 text-light jumbotron`}>
@@ -327,14 +328,10 @@ const HomePage = () => {
                     </Card.Body>
                 </Card>
             </div> */}
-                <hr className='' />
-
-               
+                <hr className='' />  
             </div>
+            <BottomBar socials={socialMedia} />
         </div>
-        
-        <BottomBar socials={socialMedia} />
-        </>
     )
 }
 export default HomePage;
