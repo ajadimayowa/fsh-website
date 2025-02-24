@@ -1,8 +1,8 @@
-import {Card, Image } from 'react-bootstrap';
+import {Card } from 'react-bootstrap';
 import './course-card.css';
 import React from 'react';
 
-const CourseCard: React.FC<any> = ({ title,description,bgColor,imgUrl,course }) => {
+const CourseCard: React.FC<any> = ({ course }) => {
     return (
         <a href={`tech-career/${course?.courseId}`} style={{textDecoration:'none'}}>
         <Card 

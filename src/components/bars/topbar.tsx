@@ -10,28 +10,28 @@ const TopBar: React.FC<any> = ({ toggleSideNav }) => {
     const navigate = useNavigate();
     const currentLocation = useLocation().pathname
 
-    const links = [
-        {
-            title: 'Home',
-            url: '/'
-        },
-        {
-            title: 'Services',
-            url: '/services'
-        },
-        {
-            title: 'Potfolio',
-            url: '/potfolio'
-        },
-        {
-            title: 'About us',
-            url: '/about-us'
-        },
-        {
-            title: 'Contact us',
-            url: '/contact-us'
-        }
-    ]
+    // const links = [
+    //     {
+    //         title: 'Home',
+    //         url: '/'
+    //     },
+    //     {
+    //         title: 'Services',
+    //         url: '/services'
+    //     },
+    //     {
+    //         title: 'Potfolio',
+    //         url: '/potfolio'
+    //     },
+    //     {
+    //         title: 'About us',
+    //         url: '/about-us'
+    //     },
+    //     {
+    //         title: 'Contact us',
+    //         url: '/contact-us'
+    //     }
+    // ]
     return (
         <div className="navbar shadow shadow-sm sticky-top bg-light p-3 d-flex justify-content-between">
             <img role='button' onClick={() => navigate('/')} height={61} src='https://verifiedsell.s3.eu-north-1.amazonaws.com/fshwebsiteresources/fsh-png-logo.png' />
