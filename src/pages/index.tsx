@@ -7,9 +7,11 @@ import TestimonyCard from '../components/cards/testimony-card';
 import ItemListCard from '../components/cards/item-list-card';
 import BottomBar from '../components/bars/bottom-bar';
 import TopBar from '../components/bars/topbar';
+import SideBarUnauth from '../components/bars/side-bar-unauth';
 
 const HomePage = () => {
     const [onQuote, setOnQuote] = useState(false);
+    const [toggleSideNav,setToggleSideNav] = useState(false)
 
     const qualities = [
         'Efficient and easy to use software solutions.',
@@ -96,9 +98,7 @@ const HomePage = () => {
     ]
     return (
         <div className='w-100'>
-            <TopBar/>
-            <QuoteModal on={onQuote} off={() => setOnQuote(false)} />
-
+            <TopBar toggleSideNav={()=>setToggleSideNav(!toggleSideNav)}/>
             <div className={`w-100 d-flex flex-wrap gap-2 p-3 text-light jumbotron`}>
                 <div className='leftSide d-flex flex-column justify-content-center align-items-start'>
                     <h1 className='poppins-extrabold heading'>
@@ -330,7 +330,10 @@ const HomePage = () => {
             </div> */}
                 <hr className='' />  
             </div>
+            
+            <QuoteModal on={onQuote} off={() => setOnQuote(false)} />
             <BottomBar socials={socialMedia} />
+            <SideBarUnauth on={toggleSideNav} off={()=>setToggleSideNav(!toggleSideNav)}/>
         </div>
     )
 }

@@ -2,7 +2,9 @@
     display: flex;
     background-color: red;
     flex-wrap: wrap;
+    color: #fff;
 }
+
 
 @media  screen and (max-width: 570px) {
 
