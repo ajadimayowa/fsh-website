@@ -3,8 +3,11 @@ import curriculum from '../assets/pdfs/Software Development Curriculum - fsh.pdf
 import './tech-info-page.css'
 import TopBar from '../components/bars/topbar';
 import BottomBar from '../components/bars/bottom-bar';
+import { useState } from 'react';
 
 const TechInfoPage = () => {
+    const [onQuote, setOnQuote] = useState(false);
+        const [toggleSideNav, setToggleSideNav] = useState(false)
 
     const programSchedule = [
         {

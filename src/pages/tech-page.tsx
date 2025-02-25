@@ -7,8 +7,13 @@ import BottomBar from '../components/bars/bottom-bar';
 import TopBar from '../components/bars/topbar';
 import CourseCard from '../components/cards/course-card';
 import './tech-page.css'
+import { useState } from 'react';
+import QuoteModal from '../components/modals/quote-modal';
+import SideBarUnauth from '../components/bars/side-bar-unauth';
 
 const TechPage = () => {
+    const [onQuote, setOnQuote] = useState(false);
+        const [toggleSideNav, setToggleSideNav] = useState(false)
 
 
     interface ICourse {
@@ -57,7 +62,9 @@ const TechPage = () => {
     ]
     return (
         <>
-            <TopBar />
+             <TopBar toggleSideNav={()=>setToggleSideNav(!toggleSideNav)}/>
+        <QuoteModal on={onQuote} off={() => setOnQuote(false)} />
+        <SideBarUnauth on={toggleSideNav} off={()=>setToggleSideNav(!toggleSideNav)}/>
             <div className='w-100'>
             <div className='services-hero-section text-light justify-content-center align-items-center w-100 text-center  p-3'>
             <h4 className='headers'>

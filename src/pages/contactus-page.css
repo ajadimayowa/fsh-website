@@ -1,26 +1,26 @@
-.services-container{
+.contactus-container{
     min-height: 100vh;
    
 }
-.services-hero-section{
+.contactus-hero-section{
     display: flex;
     flex-direction: column;
     min-height: 300px;
     background: linear-gradient(rgba(2, 12, 89, 0.8), rgba(2, 12, 89, 0.8)), 
-              url('../assets/images/service-hero-img.jpg') center/cover no-repeat;
+              url('../assets/images/contact-us-img.jpg') center/cover no-repeat;
      
 }
 
 @media  screen and (max-width: 570px) {
 
-    .services-container {
+    .contactus-container {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         min-height: 100vh;
     }
 
-    .services-hero-section{
+    .contactus-hero-section{
         display: flex;
         flex-direction: column;
         min-height: 300px;

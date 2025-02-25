@@ -3,12 +3,19 @@ import TopBar from '../components/bars/topbar';
 import './services-page.css';
 import { services } from '../constants';
 import ServiceCard from '../components/cards/service-card';
+import { useState } from 'react';
+import QuoteModal from '../components/modals/quote-modal';
+import SideBarUnauth from '../components/bars/side-bar-unauth';
 
 const AboutUsPage = () => {
+    const [onQuote, setOnQuote] = useState(false);
+        const [toggleSideNav, setToggleSideNav] = useState(false)
 
     return (
         <>
-            <TopBar />
+           <TopBar toggleSideNav={()=>setToggleSideNav(!toggleSideNav)}/>
+        <QuoteModal on={onQuote} off={() => setOnQuote(false)} />
+        <SideBarUnauth on={toggleSideNav} off={()=>setToggleSideNav(!toggleSideNav)}/>
             <div className='services-container'>
                 <div className='services-hero-section text-light justify-content-center align-items-center w-100 text-center  p-3'>
                     <h5 className='title'>

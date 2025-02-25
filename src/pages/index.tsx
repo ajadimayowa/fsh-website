@@ -1,4 +1,4 @@
-import { Button,Image } from 'react-bootstrap';
+import { Button, Image } from 'react-bootstrap';
 import './index.css';
 import QuoteModal from '../components/modals/quote-modal';
 import { useState } from 'react';
@@ -11,7 +11,7 @@ import SideBarUnauth from '../components/bars/side-bar-unauth';
 
 const HomePage = () => {
     const [onQuote, setOnQuote] = useState(false);
-    const [toggleSideNav,setToggleSideNav] = useState(false)
+    const [toggleSideNav, setToggleSideNav] = useState(false);
 
     const qualities = [
         'Efficient and easy to use software solutions.',
@@ -97,8 +97,12 @@ const HomePage = () => {
         }
     ]
     return (
-        <div className='w-100'>
-            <TopBar toggleSideNav={()=>setToggleSideNav(!toggleSideNav)}/>
+        <>
+        <TopBar toggleSideNav={()=>setToggleSideNav(!toggleSideNav)}/>
+        <QuoteModal on={onQuote} off={() => setOnQuote(false)} />
+        <SideBarUnauth on={toggleSideNav} off={()=>setToggleSideNav(!toggleSideNav)}/>
+
+        <div className='w-100 min-vh-100'>
             <div className={`w-100 d-flex flex-wrap gap-2 p-3 text-light jumbotron`}>
                 <div className='leftSide d-flex flex-column justify-content-center align-items-start'>
                     <h1 className='poppins-extrabold heading'>
@@ -330,11 +334,11 @@ const HomePage = () => {
             </div> */}
                 <hr className='' />  
             </div>
-            
-            <QuoteModal on={onQuote} off={() => setOnQuote(false)} />
-            <BottomBar socials={socialMedia} />
-            <SideBarUnauth on={toggleSideNav} off={()=>setToggleSideNav(!toggleSideNav)}/>
         </div>
+
+        <BottomBar socials={socialMedia} />
+        </>
+        
     )
 }
 export default HomePage;
