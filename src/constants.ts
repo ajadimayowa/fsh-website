@@ -10,7 +10,7 @@ const nav_links = [
         icon:''
     },
     {
-        title:'Potfolio',
+        title:'Portfolio',
         path:'/potfolio',
         icon:''
     },
