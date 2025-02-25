@@ -4,6 +4,8 @@ import './tech-info-page.css'
 import TopBar from '../components/bars/topbar';
 import BottomBar from '../components/bars/bottom-bar';
 import { useState } from 'react';
+import QuoteModal from '../components/modals/quote-modal';
+import SideBarUnauth from '../components/bars/side-bar-unauth';
 
 const TechInfoPage = () => {
     const [onQuote, setOnQuote] = useState(false);
@@ -36,7 +38,9 @@ const TechInfoPage = () => {
 
     return (
         <>
-        <TopBar/>
+        <TopBar toggleSideNav={()=>setToggleSideNav(!toggleSideNav)}/>
+        <QuoteModal on={onQuote} off={() => setOnQuote(false)} />
+        <SideBarUnauth on={toggleSideNav} off={()=>setToggleSideNav(!toggleSideNav)}/>
         <div className='w-100'>
             <div className='tech-info-page-sec-1 flex-wrap gap-4 w-100 p-4'>
                 <div className='' id='left'>
