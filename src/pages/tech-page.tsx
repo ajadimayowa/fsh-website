@@ -92,7 +92,7 @@ const TechPage = () => {
                 {/* <QuoteModal on={onQuote} off={() => setOnQuote(false)} /> */}
                 
 
-                <div className='d-flex gap-3 flex-wrap'>
+                <div className='d-flex gap-3 justify-content-center flex-wrap'>
                     {
                         courses.map((app: ICourse, index: number) => (
                             <div key={index} style={{maxWidth:'300px'}}>

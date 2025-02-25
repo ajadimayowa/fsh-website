@@ -1,11 +1,11 @@
 import BottomBar from '../components/bars/bottom-bar';
 import TopBar from '../components/bars/topbar';
 import './services-page.css';
-import { services } from '../constants';
-import ServiceCard from '../components/cards/service-card';
 import { useState } from 'react';
 import SideBarUnauth from '../components/bars/side-bar-unauth';
 import QuoteModal from '../components/modals/quote-modal';
+import { Tab, Tabs } from 'react-bootstrap';
+import WebsiteTabs from '../components/tabs/website-tabs';
 
 const PotfolioPage = () => {
     const [onQuote, setOnQuote] = useState(false);
@@ -19,7 +19,7 @@ const PotfolioPage = () => {
             <div className='services-container'>
                 <div className='services-hero-section text-light justify-content-center align-items-center w-100 text-center  p-3'>
                     <h5 className='title'>
-                        What we have done.
+                        See amazing things we have done.
                     </h5>
 
                     <p className='text-center'>
@@ -27,27 +27,44 @@ const PotfolioPage = () => {
                     </p>
                 </div>
 
-<div className='d-flex p-4  justify-content-center align-items-center m-3'>
-    {/* <Image className='' src={serviceWoman}/> */}
-    <div className='d-flex rounded service-img w-100'>
-        {
-            ` `
-        }
-    </div>
-</div>
+                <div className="d-flex flex-column w-100 justify-content-center align-items-center">
+                                <Tabs
+                                    defaultActiveKey="website"
+                                    id="uncontrolled-tab-example"
+                                    variant="underline"
+                                    className="mb-3 gap-5"
+                                >
+                                    <Tab eventKey="website" title="Websites"
+                                        tabClassName=""
+                                    >
+                                        <WebsiteTabs/>
+                                        {/* <ArtisanSavingTab thrifts={artisanSavingThrift} /> */}
+                                    </Tab>
 
-<div className='d-flex flex-wrap p-4 justify-content-center' style={{marginTop:'-100px'}}>
-    {
-        services.map((service)=>(
-            <ServiceCard
-            bgColor={'light'}
-            title={service.title}
-            icon={service.icon}
-            description={service.description}
-            />
-        ))
-    }
-</div>
+                                    <Tab eventKey="portals" title="Web Apps">
+                                    <p>B</p>
+                                    {/* <ArtisanWithdrawTab thrifts={artisanWithdrawThrift} /> */}
+                                    </Tab>
+
+                                    <Tab eventKey="mobile" title="Mobile Apps">
+                                    <p>B</p>
+                                    {/* <ArtisanWithdrawTab thrifts={artisanWithdrawThrift} /> */}
+                                    </Tab>
+
+                                    <Tab eventKey="branding" title="Branding">
+                                    <p>B</p>
+                                    {/* <ArtisanWithdrawTab thrifts={artisanWithdrawThrift} /> */}
+                                    </Tab>
+
+                                    
+
+
+                                </Tabs>
+
+                            </div>
+
+
+
             </div>
             <BottomBar />
         </>

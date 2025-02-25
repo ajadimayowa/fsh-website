@@ -92,4 +92,46 @@ const services = [
 
 ]
 
-export { nav_links,business_links,resources_links,legal_links,services}
+const wordpress_websites = [
+    {
+        title:'Nesky Engineering',
+        url:'https://neskyengineering.com',
+        imageUrl:'https://verifiedsell.s3.eu-north-1.amazonaws.com/fshwebsiteresources/nesky-logo.png',
+        description : 'Civil engineering and construction compnay.'
+    },
+    {
+        title:'Mega Proceeds Properties',
+        url:'https://megaproceedsproperties.com',
+        imageUrl:'https://verifiedsell.s3.eu-north-1.amazonaws.com/fshwebsiteresources/wok9jalogo.svg',
+        description : 'Real estate management and investment firm.'
+    },
+    {
+        title:'Chase Fabricate',
+        url:'https://chasefabricate.com',
+        imageUrl:'https://verifiedsell.s3.eu-north-1.amazonaws.com/fshwebsiteresources/nesky-logo.png',
+        description : 'Metal fabrication company.'
+    },
+]
+
+const web_apps = [
+    {
+        title:'Wok9ja',
+        url:'https://wok9ja.vercel.com',
+        imageUrl:'bi bi-easel2-fill',
+        description : 'Civil engineering and construction compnay'
+    },
+    {
+        title:'Surplus9ja',
+        url:'https://megaproceedsproperties.com',
+        imageUrl:'bi bi-easel2-fill',
+        description : 'Real estate management and investment firm.'
+    },
+    {
+        title:'Bira',
+        url:'https://chasefabricate.com',
+        imageUrl:'bi bi-easel2-fill',
+        description : 'People, Places, Lifestyle and Network.'
+    },
+]
+
+export {web_apps, nav_links,business_links,resources_links,legal_links,services,wordpress_websites}
